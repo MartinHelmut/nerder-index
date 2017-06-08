@@ -1,0 +1,52 @@
+{
+  "name": "nerder-index",
+  "version": "0.1.0",
+  "description": "Calculate a difficulty for a given functions.",
+  "main": "dist/index.js",
+  "esnext": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "eslint lib/*.js && jest",
+    "build": "babel lib --out-dir dist",
+    "commit": "git-cz",
+    "release": "standard-version -a",
+    "prepublish": "npm test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MartinHelmut/nerder-index.git"
+  },
+  "keywords": [
+    "complexity",
+    "nerder",
+    "difficulty"
+  ],
+  "author": "Martin Helmut Fieber <info@martin-fieber.de> (http://martin-fieber.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MartinHelmut/nerder-index/issues"
+  },
+  "homepage": "https://github.com/MartinHelmut/nerder-index#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "escomplex": "^2.0.0-alpha"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "20.0.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
+    "eslint": "^3.19.0",
+    "jest": "20.0.4",
+    "standard-version": "4.0.0"
+  }
+}
