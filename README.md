@@ -4,6 +4,7 @@
 [![Build Status][travisimg]][travisorg]
 [![Commitizen friendly][czimg]][czcli]
 [![Standard Version][stdimg]][stdurl]
+[![styled with prettier][prtimg]][prturl]
 
 ## Contents
 
@@ -198,3 +199,5 @@ The "Nerder Index" is a float where `0` is an invalid index (no parameters defin
 [stdurl]: https://github.com/conventional-changelog/standard-version
 [es]: http://esprima.org/
 [esc]: https://github.com/escomplex/escomplex
+[prtimg]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg
+[prturl]: https://github.com/prettier/prettier
