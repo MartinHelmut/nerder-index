@@ -99,3 +99,4 @@ GitHub.sublime-settings
 node_modules/
 npm-debug.log
 dist/
+package-lock.json
