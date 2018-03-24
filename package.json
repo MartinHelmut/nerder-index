@@ -1,6 +1,6 @@
 {
   "name": "nerder-index",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Calculate a difficulty for a given functions.",
   "main": "dist/index.js",
   "esnext": "lib/index.js",
