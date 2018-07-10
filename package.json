@@ -61,13 +61,13 @@
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
-    "babel-jest": "23.2.0",
+    "babel-jest": "23.4.0",
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
     "babel-preset-env": "1.7.0",
     "commitizen": "2.10.1",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "5.1.0",
-    "jest": "23.3.0",
+    "jest": "23.4.0",
     "prettier": "1.13.7",
     "standard-version": "4.4.0"
   }
