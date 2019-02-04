@@ -1,8 +1,4 @@
 {
-  "presets": ["env"],
-  "plugins": [
-    ["transform-es2015-modules-commonjs", {
-      "spec": true
-    }]
-  ]
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-transform-modules-commonjs"]
 }

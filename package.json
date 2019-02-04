@@ -18,7 +18,7 @@
     "ci": "npm run lint && npm run format:check && npm run test",
     "commit": "git-cz",
     "release": "standard-version -a",
-    "prepublish": "npm test && npm run build"
+    "prepare": "npm test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -66,10 +66,10 @@
     "escomplex": "^2.0.0-alpha"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
+    "@babel/cli": "7.2.3",
     "babel-jest": "24.0.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
-    "babel-preset-env": "1.7.0",
+    "@babel/plugin-transform-modules-commonjs": "7.2.0",
+    "@babel/preset-env": "7.3.1",
     "commitizen": "3.0.5",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "5.13.0",
