@@ -6,7 +6,8 @@
   "esnext": "lib/index.js",
   "types": "lib/index.d.ts",
   "engines": {
-    "node": ">=6"
+    "node": ">=6",
+    "npm": ">=3"
   },
   "scripts": {
     "test": "eslint lib/*.js && jest",
