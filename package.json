@@ -10,9 +10,12 @@
     "npm": ">=3"
   },
   "scripts": {
-    "test": "eslint lib/*.js && jest",
     "build": "babel lib --out-dir dist",
-    "format": "prettier --print-width 80 --tab-width 4 --single-quote --write \"lib/*.js\"",
+    "test": "jest",
+    "lint": "eslint lib/*.js",
+    "format": "prettier --write \"**/*.{js,md,json,yml}\"",
+    "format:check": "prettier --list-different \"**/*.{js,md,json,yml}\"",
+    "ci": "npm run lint && npm run format:check && npm run test",
     "commit": "git-cz",
     "release": "standard-version -a",
     "prepublish": "npm test && npm run build"
@@ -24,7 +27,8 @@
   "keywords": [
     "complexity",
     "nerder",
-    "difficulty"
+    "difficulty",
+    "index"
   ],
   "author": "Martin Helmut Fieber <info@martin-fieber.de> (https://martin-fieber.de)",
   "license": "MIT",

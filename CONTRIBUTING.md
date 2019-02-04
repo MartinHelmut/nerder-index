@@ -4,12 +4,12 @@ You want do something for this repo? Nice and easy! And of course: you are the b
 
 ## Contents
 
-* [Run tests](#run-tests)
-* [Build the library](#build-the-library)
-* [Commit changes](#commit-changes)
-* [Recommended workflow for release](#recommended-workflow-for-release)
+- [Run tests](#run-tests)
+- [Build the library](#build-the-library)
+- [Commit changes](#commit-changes)
+- [Recommended workflow for release](#recommended-workflow-for-release)
 
-* * *
+---
 
 Clone the repo and ...
 
