@@ -8,24 +8,24 @@
 
 ## Contents
 
-* [Dependencies](#dependencies)
-* [Usage](#usage)
-  * [API](#api)
-    * [get(fn: string)](#getfn-string)
-    * [analyse(fn: string)](#analysefn-string)
-  * [TypeScript support](#typescript-support)
-* [How](#how)
-  * [Cyclomatic complexity](#cyclomatic-complexity)
-  * [Number of parameters](#number-of-parameters)
-  * [Operator index](#operator-index)
-  * [Nerder Index (N)](#nerder-index-n-1)
-    * [Examples](#examples)
-  * [Result](#result)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+  - [API](#api)
+    - [get(fn: string)](#getfn-string)
+    - [analyse(fn: string)](#analysefn-string)
+  - [TypeScript support](#typescript-support)
+- [How](#how)
+  - [Cyclomatic complexity](#cyclomatic-complexity)
+  - [Number of parameters](#number-of-parameters)
+  - [Operator index](#operator-index)
+  - [Nerder Index (N)](#nerder-index-n-1)
+    - [Examples](#examples)
+  - [Result](#result)
 
 ## Dependencies
 
-* Node >= 6.0.0
-* NPM >= 3.0.0
+- Node >= 6.0.0
+- NPM >= 3.0.0
 
 ## Usage
 
@@ -38,7 +38,7 @@ npm i nerder-index
 and import it in your application:
 
 ```javascript
-const { get } = require('nerder-index');
+const { get } = require("nerder-index");
 ```
 
 ### API
@@ -49,11 +49,11 @@ Get the "Nerder Index" as a float number representing the difficulty of the give
 
 **Parameters:**
 
-* fn `string`
+- fn `string`
 
 **Returns:**
 
-* nerder index `float`
+- nerder index `float`
 
 ### analyse(fn: string)
 
@@ -61,15 +61,15 @@ Get a detailed object containing more information about the difficulty.
 
 **Parameters:**
 
-* fn `string`
+- fn `string`
 
 **Returns:**
 
-* Object `object`
-  * nerder index `nerderIndex: float`
-  * parameter count `parameterCount: int`
-  * cyclomatic complexity: `complexity: int`
-  * operator index `operatorIndex: int`
+- Object `object`
+  - nerder index `nerderIndex: float`
+  - parameter count `parameterCount: int`
+  - cyclomatic complexity: `complexity: int`
+  - operator index `operatorIndex: int`
 
 ## TypeScript support
 
@@ -80,8 +80,10 @@ This module supports typescript and is packed with its own type definition file.
 Following test setup was used to extract difficulty for a given functions (example):
 
 ```javascript
-const { get } = require('nerder-index');
-const fn = function test() { return 1; };
+const { get } = require("nerder-index");
+const fn = function test() {
+  return 1;
+};
 const result = get(fn.toString());
 ```
 
@@ -89,9 +91,9 @@ const result = get(fn.toString());
 
 Values relevant to calculate a difficulty level for one specific function are:
 
-* **Cyclomatic complexity (C):** Defined by Thomas J. McCabe in 1976, this is a count of the number of cycles in the program flow control graph. Effectively the number of distinct paths through a block of code. Lower is better.
-* **Number of parameters (P<sub>n</sub>):** Analysed statically from the function signature, so no accounting is made for functions that rely on the arguments object. Lower is better.
-* **Operator index (o):** The number of total operators divided by the number of distinct operators. Lower is better.
+- **Cyclomatic complexity (C):** Defined by Thomas J. McCabe in 1976, this is a count of the number of cycles in the program flow control graph. Effectively the number of distinct paths through a block of code. Lower is better.
+- **Number of parameters (P<sub>n</sub>):** Analysed statically from the function signature, so no accounting is made for functions that rely on the arguments object. Lower is better.
+- **Operator index (o):** The number of total operators divided by the number of distinct operators. Lower is better.
 
 ### Cyclomatic complexity
 
@@ -100,22 +102,22 @@ The "cyclomaticy" is `C{1,...,n}`. A function without control constructs still h
 ```javascript
 // C = 1
 function fn1() {
-    return 1;
+  return 1;
 }
 
 // C = 1
 function fn2(p) {
-    let a = 13;
-    a = 2 * p / a - 5 + 42;
-    return 42;
+  let a = 13;
+  a = (2 * p) / a - 5 + 42;
+  return 42;
 }
 
 // C = 2
 function fn3(a) {
-    if (a) {
-        return a;
-    }
-    return 1;
+  if (a) {
+    return a;
+  }
+  return 1;
 }
 ```
 
@@ -129,9 +131,9 @@ The operator index is defined by `o = oT / oD`. The following functions defines 
 
 ```javascript
 function fn2(p) {
-    let a = 4;
-    a = 2 * p / a - 5 + 42;
-    return 42;
+  let a = 4;
+  a = (2 * p) / a - 5 + 42;
+  return 42;
 }
 ```
 
@@ -148,42 +150,42 @@ N = o * Pn * C
 Here is an example setup to calculate the "Nerder Index" for 4 functions:
 
 ```javascript
-const { get } = require('nerder-index');
+const { get } = require("nerder-index");
 
 const fns = [
-    function fn1() {
-        return 1;
-    },
-    function fn2(c) {
-        let a = 42;
-        a = 2 * a / a - 5 + c;
-        return 42;
-    },
-    function fn3(c, d) {
-        let a = 23;
-        a = 2 * a / a - d + 42;
-        return a + c;
-    },
-    function fn4(a, b, c) {
-        if (a === 0) {
-            return b;
-        }
-        return c;
+  function fn1() {
+    return 1;
+  },
+  function fn2(c) {
+    let a = 42;
+    a = (2 * a) / a - 5 + c;
+    return 42;
+  },
+  function fn3(c, d) {
+    let a = 23;
+    a = (2 * a) / a - d + 42;
+    return a + c;
+  },
+  function fn4(a, b, c) {
+    if (a === 0) {
+      return b;
     }
+    return c;
+  }
 ];
 
-fns.forEach((fn) => {
-    const result = get(fn.toString());
-    console.log('N =', result);
+fns.forEach(fn => {
+  const result = get(fn.toString());
+  console.log("N =", result);
 });
 ```
 
 These methods produce the following results:
 
-* N<sub>fn1</sub> = 0
-* N<sub>fn2</sub> = 1.1
-* N<sub>fn3</sub> = 2.4
-* N<sub>fn4</sub> = 7.5
+- N<sub>fn1</sub> = 0
+- N<sub>fn2</sub> = 1.1
+- N<sub>fn3</sub> = 2.4
+- N<sub>fn4</sub> = 7.5
 
 ### Result
 
