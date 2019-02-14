@@ -75,6 +75,6 @@
     "eslint": "5.14.0",
     "jest": "24.1.0",
     "prettier": "1.16.4",
-    "standard-version": "4.4.0"
+    "standard-version": "5.0.0"
   }
 }
