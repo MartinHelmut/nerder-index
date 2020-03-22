@@ -24,14 +24,14 @@
 
 ## Dependencies
 
-- Node >= 6.0.0
-- NPM >= 3.0.0
+- Node >= 10
+- NPM >= 6
 
 ## Usage
 
 Install the "Nerder Index" generator:
 
-```shell
+```shell script
 npm i nerder-index
 ```
 
@@ -171,10 +171,10 @@ const fns = [
       return b;
     }
     return c;
-  }
+  },
 ];
 
-fns.forEach(fn => {
+fns.forEach((fn) => {
   const result = get(fn.toString());
   console.log("N =", result);
 });
