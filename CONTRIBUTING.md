@@ -1,6 +1,6 @@
 # Contributing
 
-You want do something for this repo? Nice and easy! And of course: you are the best!
+You want do something for this repo? Nice! And of course: you are the best!
 
 ## Contents
 
@@ -17,7 +17,7 @@ Clone the repo and ...
 
 To lint the application and run all the tests use:
 
-```shell
+```shell script
 npm test
 ```
 
@@ -25,7 +25,7 @@ npm test
 
 If you want to build the application you can run
 
-```shell
+```shell script
 npm run build
 ```
 
@@ -39,7 +39,7 @@ Checkout a new branch, the naming convention is:
 
 e.g.:
 
-```shell
+```shell script
 git checkout -b feature/restore-alea-state
 ```
 
