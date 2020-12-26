@@ -6,15 +6,15 @@
   "esnext": "lib/index.js",
   "types": "lib/index.d.ts",
   "engines": {
-    "node": ">=10",
+    "node": ">=14",
     "npm": ">=6"
   },
   "scripts": {
     "build": "babel lib --out-dir dist",
     "test": "jest",
     "lint": "eslint lib/*.js",
-    "format": "prettier --write \"**/*.{js,md,json,yml}\"",
-    "format:check": "prettier --list-different \"**/*.{js,md,json,yml}\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --list-different .",
     "ci": "npm run lint && npm run format:check && npm run test",
     "commit": "git-cz",
     "release": "standard-version -a",

@@ -193,8 +193,8 @@ The "Nerder Index" is a float where `0` is an invalid index (no parameters defin
 
 [npmurl]: https://www.npmjs.com/package/nerder-index
 [npmimg]: https://img.shields.io/npm/v/nerder-index.svg
-[travisimg]: https://travis-ci.org/MartinHelmut/nerder-index.svg?branch=master
-[travisorg]: https://travis-ci.org/MartinHelmut/nerder-index
+[travisimg]: https://travis-ci.com/MartinHelmut/nerder-index.svg?branch=main
+[travisorg]: https://travis-ci.com/MartinHelmut/nerder-index
 [czimg]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [czcli]: http://commitizen.github.io/cz-cli/
 [stdimg]: https://img.shields.io/badge/release-standard%20version-brightgreen.svg
