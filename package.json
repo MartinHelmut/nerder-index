@@ -112,11 +112,11 @@
     "@babel/cli": "7.14.3",
     "@babel/plugin-transform-modules-commonjs": "7.14.0",
     "@babel/preset-env": "7.14.2",
-    "babel-jest": "26.6.3",
+    "babel-jest": "27.0.1",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.27.0",
-    "jest": "26.6.3",
+    "jest": "27.0.1",
     "prettier": "2.3.0",
     "standard-version": "9.3.0"
   }
