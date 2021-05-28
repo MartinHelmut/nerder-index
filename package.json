@@ -111,7 +111,7 @@
   "devDependencies": {
     "@babel/cli": "7.14.3",
     "@babel/plugin-transform-modules-commonjs": "7.14.0",
-    "@babel/preset-env": "7.14.2",
+    "@babel/preset-env": "7.14.4",
     "babel-jest": "27.0.1",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
