@@ -1,5 +1,7 @@
 # Nerder Index (N)
 
+⚠️ **Not maintained anymore!**
+
 [![npm][npmimg]][npmurl]
 [![Build Status][travisimg]][travisorg]
 [![Commitizen friendly][czimg]][czcli]
